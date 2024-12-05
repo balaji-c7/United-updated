@@ -1,0 +1,202 @@
+#heading1 {
+  text-align: center;
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+}
+
+P,
+div {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.full-viewport-img {
+  width: 100%; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Ensures the image covers the viewport without distortion */
+  object-position: center; /* Centers the image */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Space the boxes evenly */
+  margin-top: 20px;
+}
+
+.box4,
+.box5,
+.box6,
+.box7 {
+  width: 20%;
+  border: 2px solid #ed0000;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.box img,
+.box1 img,
+.box2 img,
+.box3 img,
+.box4 img,
+.box5 img,
+.box6 img,
+.box7 img {
+  width: 100%;
+  height: 175px;
+  border-radius: 10px;
+}
+.box p,
+.box1 p,
+.box2 p,
+.box3 p.box4 p,
+.box5 p,
+.box6 p,
+.box7 p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #f6f6f6;
+}
+
+.container1 {
+  padding: 10px;
+  justify-content: space-between;
+  display: inline;
+}
+
+.container1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.box,
+.box1,
+.box2 {
+  width: 20%;
+  border: 2px solid #ff0000;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  float: left; /* Aligns the boxes side by side from left to right */
+  margin-right: 69px;
+}
+
+body {
+  background-image: url(./images/wp3293638-manchester-united-4k-wallpapers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body h1 {
+  color: #f6f6f6;
+}
+.marquee-container {
+  overflow: hidden; /* Hide overflow for a clean effect */
+  white-space: nowrap;
+  width: 100%; /* Full-width container */
+}
+
+/* Animation for the scrolling effect */
+.marquee1 {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+  color: rgb(255, 0, 0); /* Text color */
+  font-size: 2em;
+  text-align: center;
+}
+
+/* Keyframes for moving the text from right to left */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  } /* Start from right outside the view */
+  50% {
+    transform: translateX(-100%);
+  } /* Move to left outside the view */
+  100% {
+    transform: translateX(100%);
+  }
+}
+.marquee2 {
+  display: inline-block;
+  animation: marquee-2 10s linear infinite;
+  color: rgb(255, 0, 0); /* Text color */
+  font-size: 2em;
+  text-align: center;
+}
+@keyframes marquee-2 {
+  0% {
+    transform: translateX(-100%);
+  } /* Start from right outside the view */
+  50% {
+    transform: translateX(100%);
+  } /* Move to left outside the view */
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.navbar {
+  position: fixed; /* Keeps the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 97%; /* Spans the entire width */
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.5
+  ); /* Semi-transparent black background */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000; /* Ensures it stays above other elements */
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.navbar.scrolled {
+  background-color: rgba(51, 51, 51, 0.9); /* Darker background when scrolled */
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4; /* Accent color */
+}
+.navbar .logo:hover {
+  color: #ed0000;
+}
+
+/* Content Styling */
+
+section {
+  padding: 50px 0;
+  border-bottom: 1px solid #ddd;
+}
